@@ -567,3 +567,21 @@ if 15 <= promocao < 30:
     print('Compra aceita')
 else:
     print('Necessário maior quantidade')
+   
+
+soma_1 = 2 + 4
+soma_2 = 2 + 1
+
+if 10 <= soma_1 + soma_2:
+    print('Soma maior que 10')
+else:
+    print('Soma menor que 10')
+
+
+idade_lucas = 17
+idade_carolina = 21
+
+if 18 <= idade_lucas and idade_carolina:
+    print('Lucas e Carolina são maiores de idade')
+else:
+    print('Um dos dois não é maior de idade')

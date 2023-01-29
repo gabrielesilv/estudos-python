@@ -10,7 +10,7 @@ print('Que dia é hoje?')
 
 print()
 
-# VAARIÁVEIS (str, integer, float, bool) - sempre em minúsculo
+# VARIÁVEIS (str, integer, float, bool) - sempre em minúsculo
 
 '''
  1 - integer
@@ -476,7 +476,6 @@ else:
 #if user == input('Digite o seu login: '):
 #    print(f'Meu login é {user}')
 #    print('Login correto')
-
 #else:
 #    print('Login incorreto')
 
@@ -585,3 +584,41 @@ if 18 <= idade_lucas and idade_carolina:
     print('Lucas e Carolina são maiores de idade')
 else:
     print('Um dos dois não é maior de idade')
+
+
+print() #---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+''' For Loops - looping (utilizando NÚMEROS)
+for variável in range(limite):
+
+for = executa uma ação em um determinado número de vezes (looping)
+variável (no caso número)
+in = dentro de que
+range = quantidade de vezes que o for loop vai girar dentro de si mesmo valores de 0 a 9
+
+é contado por index, ou seja, a partir do 0
+'''
+
+#imprimir de 0 a 5:
+for numero in range(6):                     #0, 1, 2, 3, 4, 5 (start)
+    print(numero)
+
+print()
+#imprimir de 1 a 5:
+for numero in range(1, 6):                  #1, 2, 3, 4, 5 (start e stop)
+    print(numero)
+
+print()
+#imprimir de 1 a 13 de 2 em 2:
+for numero in range(1, 13, 2):              #1, 3, 5, 7, 9, 11, 13 (start, stop e step)
+    print(numero)
+
+print()
+for loop in range(3, 99, 20):
+    print(loop)
+
+print()
+for palavra in range(1, 4,):
+    print(palavra)
+    print('palavra')

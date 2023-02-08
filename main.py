@@ -487,7 +487,7 @@ and - esse e esse
 or - esse ou esse
 
 and: todos tem que ser true para ser aprovado 
-or: no mínimo um dos critérios tem que ter true para ser aprovado
+or: no mínimo um dos critérios tem que ser true para ser aprovado
 
 Boolean Type (BOOL): true e false
 '''
@@ -592,10 +592,10 @@ print() #-----------------------------------------------------------------------
 ''' For Loops - looping (utilizando NÚMEROS)
 for variável in range(limite):
 
-for = executa uma ação em um determinado número de vezes (looping)
-variável (no caso número)
-in = dentro de que
-range = quantidade de vezes que o for loop vai girar dentro de si mesmo valores de 0 a 9
+- for = executa uma ação em um determinado número de vezes (looping)
+- variável
+- in = dentro de que
+- range = quantidade de vezes que o for loop vai girar dentro de si mesmo valores de 0 a 9
 
 é contado por index, ou seja, a partir do 0
 '''
@@ -611,7 +611,7 @@ for numero in range(1, 6):                  #1, 2, 3, 4, 5 (start e stop)
 
 print()
 #imprimir de 1 a 13 de 2 em 2:
-for numero in range(1, 13, 2):              #1, 3, 5, 7, 9, 11, 13 (start, stop e step)
+for numero in range(0, 13, 2):              #1, 3, 5, 7, 9, 11, 13 (start, stop e step)
     print(numero)
 
 print()
@@ -622,3 +622,28 @@ print()
 for palavra in range(1, 4,):
     print(palavra)
     print('palavra')
+
+
+print()
+'''
+For Loops - Looping (utilizando STRINGS)
+impressão de cada index da minha string
+'''
+
+for letra in 'Google':                      #associa a variável a cada index da string
+    print(letra)
+
+print()
+palavras = 'texto'
+for alfabeto in palavras:
+    print(alfabeto +  ' está dentro da palavra texto')
+
+print()
+comida = 'alimento'
+for nutricao in comida:
+    print(f'{nutricao} esta dentro da palavra {comida}')
+
+print()
+variavel = 'DADOS'
+for armazenamento in variavel:
+    print(f'a letra {armazenamento} contém na palavra {variavel}')

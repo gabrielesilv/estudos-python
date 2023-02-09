@@ -589,7 +589,7 @@ else:
 print() #---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-''' For Loops - looping (utilizando NÚMEROS)
+''' For Loop - looping (utilizando NÚMEROS)
 for variável in range(limite):
 
 - for = executa uma ação em um determinado número de vezes (looping)
@@ -625,8 +625,7 @@ for palavra in range(1, 4,):
 
 
 print()
-'''
-For Loops - Looping (utilizando STRINGS)
+''' For Loop - Looping (utilizando STRINGS)
 impressão de cada index da minha string
 '''
 
@@ -647,3 +646,58 @@ print()
 variavel = 'DADOS'
 for armazenamento in variavel:
     print(f'a letra {armazenamento} contém na palavra {variavel}')
+
+
+print()
+''' 
+For Loop (utilizando IF e ELSE)
+'''
+
+#Ex. Enviar um e-mail com os detalhes da compra online (máx. 3 tentativas) para compras confirmadas.
+compra_confirmada = True
+dados_compra = 'Compra confirmada no valor de R$ 12,50 e entrega autorizada'
+
+for enviar in range(3):                     #imprima se for verdadeira na tentative de 3x do cliente
+    if compra_confirmada:
+        print(dados_compra)
+        print('Detalhes enviados para o seu e-mail')
+        break                               #erifica se é true e para após imprimir o if 1x
+else:
+    print('Falha na compra')
+        
+
+#idade dos meus doguinhos (5 anos)
+lola = 5
+lorenzo = 3
+for acerto in range(3):
+    if lola and lorenzo == 5:
+        print('Idade correta')
+        break
+    else:
+        print('Idade incorreta')
+        break
+
+
+print()
+'''
+For Loop - Nasted loops (for loop dentro de outro for loop)
+
+- outer loop e inner loop
+'''
+
+for numero1 in range(3):          #outer loop (looping de fora): gira 1 número a cada inner loop
+    print(numero1)
+    for numero2 in range(3):      #inner loop (looping de dentro): gira os 3 números a cada outer loop
+        print(numero2)
+
+print()
+for produto in range(1,4):
+    print('Produto ' + str(produto))
+    for produto2 in range (3):
+        print(produto, produto2)
+
+print()
+for roupa in range(1,3):
+    print('Roupa ' + str(roupa))
+    for roupa2 in range(1,3):
+        print(roupa, roupa2)

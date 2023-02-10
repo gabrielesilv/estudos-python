@@ -1,4 +1,5 @@
 '''
+CURSO UDEMY
 Autora: Gabriele
 Data: 04/01/2023
 Versão do código: 1.0
@@ -635,7 +636,7 @@ for letra in 'Google':                      #associa a variável a cada index da
 print()
 palavras = 'texto'
 for alfabeto in palavras:
-    print(alfabeto +  ' está dentro da palavra texto')
+    print(alfabeto + ' está dentro da palavra texto')
 
 print()
 comida = 'alimento'
@@ -657,11 +658,11 @@ For Loop (utilizando IF e ELSE)
 compra_confirmada = True
 dados_compra = 'Compra confirmada no valor de R$ 12,50 e entrega autorizada'
 
-for enviar in range(3):                     #imprima se for verdadeira na tentative de 3x do cliente
+for enviar in range(3):                     #imprima se for verdadeira na tentativa de 3x do cliente
     if compra_confirmada:
         print(dados_compra)
         print('Detalhes enviados para o seu e-mail')
-        break                               #erifica se é true e para após imprimir o if 1x
+        break                               #verifica se é true e interrompe o looping após imprimir o if 1x
 else:
     print('Falha na compra')
         
@@ -682,7 +683,8 @@ print()
 '''
 For Loop - Nasted loops (for loop dentro de outro for loop)
 
-- outer loop e inner loop
+*outer loop
+    *inner loop
 '''
 
 for numero1 in range(3):          #outer loop (looping de fora): gira 1 número a cada inner loop
@@ -697,7 +699,30 @@ for produto in range(1,4):
         print(produto, produto2)
 
 print()
-for roupa in range(1,3):
+for roupa in range(1,4):
     print('Roupa ' + str(roupa))
-    for roupa2 in range(1,3):
+    for roupa2 in range(1,4):
         print(roupa, roupa2)
+
+
+print()
+'''
+For Loop - Separando strings
+end='': finaliza quando o print finalizar (imprime cada index na mesma linha - "é um argumento da função print() que contém uma string a ser inserida ao final da linha")
+'''
+
+#Ex. alterar a palavra FANTASTICO para F A N T A S T I C O
+palavra2 = 'FANTASTICO'
+for spaco in palavra2:
+    #abre com formated string, fecha e adiciona o comando end=''
+    #print(spaco, end='')            #FANTASTICO
+    print(f' {spaco}', end='')       #utilizado espaço após abrir a formated string para separar cada caractere = F A N T A S T I C O
+
+print()
+for doce in 'CHICLETE':
+    print(doce + ' ', end='')        #forma comum de concatenação
+
+print()
+objeto = 'TESOURA'
+for corte in objeto:
+    print(f' {corte}', end='')

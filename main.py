@@ -726,3 +726,38 @@ print()
 objeto = 'TESOURA'
 for corte in objeto:
     print(f' {corte}', end='')
+
+
+print()
+'''
+For Loop - Criando um retangulo
+
+ex. retangulo 3x3 com o símbolo @
+'''
+
+linhas = 3
+colunas = 3
+simbolo = '$'
+
+for l in range(linhas):
+    for c in range(colunas):
+        print(simbolo, end='')
+    print()  #está imprimindo um enter após rodar o outer loop
+
+
+linhas2 = 4
+colunas2 = 6
+icone = '-'
+
+for li in range(linhas2):
+    for co in range(colunas2):
+        print(icone, end='')
+    print()
+
+
+print()
+'''
+While Loop
+usado para lops dependentes de uma condição
+'''
+

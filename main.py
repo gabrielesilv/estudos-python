@@ -757,7 +757,28 @@ for li in range(linhas2):
 
 print()
 '''
-While Loop
-usado para lops dependentes de uma condição
+While Loop - gira mais um looping quando se tem uma condição
+muito usado para lops dependentes de uma condição
+- while = enquanto
 '''
 
+#Ex. criar uma promoção para um produto no valor de 100,00, e subtrair 5,00 a cada dia 
+
+v = 100
+dia = 0
+while v > 20:    #o valor só será impresso se for > 20
+    dia += 1     #a cada giro do while é adicionado mais 1 dia
+    print(f' No dia {dia}, o valor será cobrado por R${v} reais.')
+    v -= 5       #subtrai 5 do valor a cada dia
+
+
+print()
+'''
+DIFERENÇAS - IF E ELSE, FOR LOOP E WHILE LOOP
+
+IF e ELSE: condição de verdadeiro ou falso e é executado 1 vez.
+
+FOR LOOP: quando quero determinar a quantidade de giros de looping.
+
+WHILE LOOP: quando não sei quantas vezes quero que gire, espero atingir um objetivo (para essa variável, se for isso ou aquilo, gire essa quantidade).
+'''

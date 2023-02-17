@@ -759,11 +759,10 @@ print()
 '''
 While Loop - gira mais um looping quando se tem uma condição
 muito usado para lops dependentes de uma condição
-- while = enquanto
+- while = enquanto a condição (variável)...
 '''
 
 #Ex. criar uma promoção para um produto no valor de 100,00, e subtrair 5,00 a cada dia 
-
 v = 100
 dia = 0
 while v > 20:    #o valor só será impresso se for > 20
@@ -771,14 +770,34 @@ while v > 20:    #o valor só será impresso se for > 20
     print(f' No dia {dia}, o valor será cobrado por R${v} reais.')
     v -= 5       #subtrai 5 do valor a cada dia
 
+print()
+d = 30
+mes = 12
+while mes > 0:
+    print(f' No mês {mes} tem {d} dias')
+    mes -= 1
+    
 
 print()
 '''
 DIFERENÇAS - IF E ELSE, FOR LOOP E WHILE LOOP
 
-IF e ELSE: condição de verdadeiro ou falso e é executado 1 vez.
+- IF e ELSE: condição de verdadeiro ou falso e é executado 1 vez.
 
-FOR LOOP: quando quero determinar a quantidade de giros de looping.
+- FOR LOOP: quando quero determinar a quantidade de giros de looping.
 
-WHILE LOOP: quando não sei quantas vezes quero que gire, espero atingir um objetivo (para essa variável, se for isso ou aquilo, gire essa quantidade).
+- WHILE LOOP: quando não sei quantas vezes quero que gire e espero atingir um objetivo (para essa variável, se for isso ou aquilo, gire essa quantidade).
 '''
+
+
+'''
+Criando condições com While Loop
+'''
+
+#Ex. Publicar um produto com comissão de 10% se for acima de R$20:
+valor2 = 21 #int(input('Digite o valor do seu produto em R$: '))
+
+while valor2 > 20:
+    valor2 = (valor2 * 0.10) + valor2    
+    print(f'O valor final do seu produto será de R$ {valor2}')
+    break

@@ -669,14 +669,13 @@ else:
 
 #idade dos meus doguinhos (5 anos)
 lola = 5
-lorenzo = 3
+lorenzo = 5
 for acerto in range(3):
     if lola and lorenzo == 5:
         print('Idade correta')
         break
-    else:
-        print('Idade incorreta')
-        break
+else:
+    print('Idade incorreta')
 
 
 print()
@@ -702,13 +701,13 @@ print()
 for roupa in range(1,4):
     print('Roupa ' + str(roupa))
     for roupa2 in range(1,4):
-        print(roupa, roupa2)
+        print(f'{roupa2} colorida')
 
 
 print()
 '''
 For Loop - Separando strings
-end='': finaliza quando o print finalizar (imprime cada index na mesma linha - "é um argumento da função print() que contém uma string a ser inserida ao final da linha")
+end='': imprime cada index na mesma linha - "é um argumento da função print() que contém uma string a ser inserida ao final da linha"
 '''
 
 #Ex. alterar a palavra FANTASTICO para F A N T A S T I C O
@@ -786,7 +785,7 @@ DIFERENÇAS - IF E ELSE, FOR LOOP E WHILE LOOP
 
 - FOR LOOP: quando quero determinar a quantidade de giros de looping.
 
-- WHILE LOOP: quando não sei quantas vezes quero que gire e espero atingir um objetivo (para essa variável, se for isso ou aquilo, gire essa quantidade).
+- WHILE LOOP: usado para executar um bloco de instruções repetidamente até que uma condição seja satisfeita: (para essa variável, se for isso ou aquilo, gire essa quantidade).
 '''
 
 
@@ -795,9 +794,20 @@ Criando condições com While Loop
 '''
 
 #Ex. Publicar um produto com comissão de 10% se for acima de R$20:
-valor2 = 21 #int(input('Digite o valor do seu produto em R$: '))
+valor2 = 120 #int(input('Digite o valor do seu produto em R$: '))
 
 while valor2 > 20:
     valor2 = (valor2 * 0.10) + valor2    
     print(f'O valor final do seu produto será de R$ {valor2}')
-    break
+    break   #para fazer a soma somente 1x
+
+
+print()
+'''
+Function, module, package e library
+
+Function: funções contendo informações para serem utilizadas várias vezes
+Module: converte as funções em um módulo 
+Package: grupo de módulos
+Library: grupo de package
+'''

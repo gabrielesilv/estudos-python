@@ -402,7 +402,7 @@ x -= 5          # =5
 x *= 5          # =50
 x /= 5          # =2
 x %= 3          # =1 (3 cabe 3 vezes no 10, sobrando 1)
-x %= 2          # =0 (o 2 cabem 5 vezes no 10, sobrando 0)
+x %= 2          # =0 (2 cabe 5 vezes no 10, sobrando 0)
 
 y = 30
 y /= 15
@@ -730,10 +730,9 @@ for corte in objeto:
 print()
 '''
 For Loop - Criando um retangulo
-
-ex. retangulo 3x3 com o símbolo @
 '''
 
+# Ex. retangulo 3x3 com o símbolo @
 linhas = 3
 colunas = 3
 simbolo = '$'
@@ -757,11 +756,18 @@ for li in range(linhas2):
 print()
 '''
 While Loop - gira mais um looping quando se tem uma condição
-muito usado para lops dependentes de uma condição
-- while = enquanto a condição (variável)...
+muito usado para loops dependentes de uma condição
+- while condição:
+    bloco de códigos
 '''
 
-#Ex. criar uma promoção para um produto no valor de 100,00, e subtrair 5,00 a cada dia 
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+
+print()
+# Ex. criar uma promoção para um produto no valor de 100,00, e subtrair 5,00 a cada dia 
 v = 100
 dia = 0
 while v > 20:    #o valor só será impresso se for > 20
@@ -793,21 +799,147 @@ DIFERENÇAS - IF E ELSE, FOR LOOP E WHILE LOOP
 Criando condições com While Loop
 '''
 
-#Ex. Publicar um produto com comissão de 10% se for acima de R$20:
+# Ex. Publicar um produto com comissão de 10% se for acima de R$20:
 valor2 = 120 #int(input('Digite o valor do seu produto em R$: '))
 
 while valor2 > 20:
     valor2 = (valor2 * 0.10) + valor2    
     print(f'O valor final do seu produto será de R$ {valor2}')
-    break   #para fazer a soma somente 1x
+    break   # para fazer a soma somente 1x
 
 
 print()
 '''
 Function, module, package e library
 
-Function: funções contendo informações para serem utilizadas várias vezes
+Function: contém informações para serem utilizadas várias vezes
 Module: converte as funções em um módulo 
 Package: grupo de módulos
 Library: grupo de package
 '''
+
+
+'''
+Functions (Funções)
+def = definição, criar uma função
+
+- Sintaxe:
+def função():
+    bloco de códigos
+função()
+'''
+
+def boas_vindas():
+    print('Olá Nome!')
+    print('Temos 5 laptops em estoque')
+boas_vindas()       # função que está guardando as infos no bloco de códigos, podendo ser utilizada várias x sem que seja necessário escrever tudo de novo
+
+print()
+def teste():
+    t = 4
+    #if e else
+    if 0 < t < 3:
+        print('ok')
+    else:
+        print('errado')
+    print('teste de function')
+    #for loop int
+    for a in range(1,5,2):
+        print(a)
+    # while loop
+    while t < 3:
+        print(t)
+        break
+    #for loop
+    linh = 2
+    colu = 2
+    simb = ':)'
+    for lin in range(linh):
+        for col in range(colu):
+            print(simb, end='')
+        print()
+    #métodos str - lower
+    maiusculo = 'BORBOLETA'
+    print(maiusculo.lower())
+    print(f' {maiusculo}')
+    #for loop str
+    color = 'ARCOÍRIS'
+    for paleta in color:
+        print(f' {paleta}', end='')
+
+teste()
+
+
+print()
+# CRIANDO FUNÇÃO DE SOMA
+# A function trás a possibilidade de usar as mesmas variáveis com o mesmo nome dentro de funções diferentes
+
+def somar_dois_num():
+    number1 = 10
+    number2 = 5
+    resultado = number1 + number2
+    print(resultado)
+
+def somar_dois_num1():
+    number1 = 71
+    number2 = 48
+    resultado = number1 + number2
+    print(resultado)
+
+somar_dois_num()
+somar_dois_num1()
+
+
+print()
+'''PARÂMETROS E ARGUMENTOS EM UMA FUNÇÃO
+
+-Ex.
+def boas_vindas_marcos():
+    print('Olá Marcos!')
+    print('Temos 5 laptops em estoque')
+
+def boas_vindas_Ronaldo():
+    print('Olá Ronaldo!')
+    print('Temos 4 laptops em estoque')
+
+def boas_vindas_Linda():
+    print('Olá Linda!')
+    print('Temos 2 laptops em estoque')
+
+boas_vindas_marcos()
+boas_vindas_Ronaldo()
+boas_vindas_Linda()
+'''
+
+# PARÂMETROS --> ARGUMENTOS
+
+def boas_vindas(nome, quantidade): #parâmetros (nome, quantidade)
+    print(f'Olá {nome}')
+    print(f'Temos {str(quantidade)} laptops em estoque')
+
+boas_vindas('Marcos', 5) #argumentos para os parâmetros (marcos, 5)
+boas_vindas('Ronaldo', 4)
+boas_vindas('Linda', 2)
+
+print()
+def congresso(mes, ano, edicao):
+    print(f'Em {mes} de {str(ano)}, foi realizado a {str(edicao)} edição do CIOSP.')
+congresso('Janeiro', 2023, 40)
+
+
+print()
+'''
+Argumentos Default e Non-default
+    Default = aquele que você define o valor no parâmetro
+    Non-default = aquele que você não define o valor no parâmetro
+
+'''
+
+# Default = SEMPRE APÓS O NON-DEFAULT
+# Non-default = SEMPRE ANTES DO DEFAULT
+
+def boas_vindas(nome, quantidade=6):  #parâmetro 'nome' = non-default | parâmetro 'quantidade' - default
+    print(f'Olá {nome}')
+    print(f'Temos {str(quantidade)} laptops em estoque')
+
+boas_vindas('Marcos')  #caso não coloque argumento para o parâmetro quantidade, é validado o default, podendo também alterar o valor no argumento

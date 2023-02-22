@@ -943,3 +943,45 @@ def boas_vindas(nome, quantidade=6):  #parâmetro 'nome' = non-default | parâme
     print(f'Temos {str(quantidade)} laptops em estoque')
 
 boas_vindas('Marcos')  #caso não coloque argumento para o parâmetro quantidade, é validado o default, podendo também alterar o valor no argumento
+
+
+print()
+'''
+Print ou Return em Funções
+
+Funções:
+    Realizam uma tarefa: utiliza print (não é armazenado, apenas impresso na tela e descartado)
+    Calcula e retorna um valor: utiliza return (o programa armazena os dados com return para ser usado em uma variável depois)
+'''
+
+def cliente1(nome):
+    print(f'Olá {nome}')      #tarefa: retorna um valor na tela (print) mas no programa em si não foi retornado nenhum valor
+
+
+def cliente2(nome):
+    return f'Olá {nome}'      #armazena um valor no programa mas não é impresso na tela, precisando de uma variável para ser retornado
+
+x = cliente1('Maria')
+y = cliente2('José')
+
+print(x)  #none:
+print(y)  #foi pedido para ser impresso na tela um valor que existe, na qual foi armazenado pelo return (y)
+
+
+print()
+def calculo1():
+    c1 = 16
+    c2 = 10
+    result = c1 + c2
+    print(result)
+
+calculo1()
+
+def calculo2():
+    c1 = 20
+    c2 = 10
+    result = c1 + c2
+    return result
+
+b = calculo2()
+print(b)
